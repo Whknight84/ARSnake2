@@ -13,6 +13,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The camera that objects will face when spawned. If not set, defaults to the main camera.")]
         Camera m_CameraToFace;
         bool spawnone;
+        [SerializeField] private GameObject button;
 
         /// <summary>
         /// The camera that objects will face when spawned. If not set, defaults to the <see cref="Camera.main"/> camera.
@@ -234,6 +235,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             objectSpawned?.Invoke(newObject);
             spawnone = true;
+            button.SetActive(true);
             return true;
         }
     }
